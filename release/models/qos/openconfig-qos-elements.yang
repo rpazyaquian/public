@@ -535,6 +535,18 @@ submodule openconfig-qos-elements {
         uses qos-queue-red-config;
         uses qos-queue-red-state;
       }
+
+      container common {
+        description
+          "Common data for RED queues";
+
+        container config {
+          description
+            "Common configuration data for RED queues";
+
+          uses qos-queue-red-common-config;
+        }
+      }
     }
   }
 
