@@ -603,6 +603,14 @@ submodule openconfig-qos-elements {
           uses qos-queue-config;
           uses qos-queue-state;
         }
+
+        uses qos-queue-red-top {
+          when "./config/queue-type = 'oc-qos-types:RED'" {
+            description
+              "RED configuration is valid when the queue-type
+              is set accordingly.";
+          }
+        }
       }
     }
   }
